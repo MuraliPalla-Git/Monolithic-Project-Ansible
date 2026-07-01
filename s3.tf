@@ -23,4 +23,13 @@ status = "Enabled"
 }
 }
 
+terraform {
+backend "s3" {
+region = "eu-north-1"
+bucket = "muralimonolithicprojbucketwithansible.00004.bucks"
+key = "prod/terraform.tfstate"
+}
+}
+
+
 
