@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "one" {
-  bucket = "mustafa77.flm77.moonobucket"
+  bucket = "muralimonolithicprojbucketwithansible.00004.bucks"
 }
 
 resource "aws_s3_bucket_ownership_controls" "two" {
@@ -20,14 +20,6 @@ resource "aws_s3_bucket_versioning" "three" {
 bucket = aws_s3_bucket.one.id
 versioning_configuration {
 status = "Enabled"
-}
-}
-
-terraform {
-backend "s3" {
-region = "us-east-1"
-bucket = "mustafa77.flm77.moonobucket"
-key = "prod/terraform.tfstate"
 }
 }
 
